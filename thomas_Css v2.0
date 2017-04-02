@@ -1,0 +1,214 @@
+#Menu{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: linear-gradient(black, 	#595959);
+}
+
+#boxNumeri{
+  width:80%;
+  height:30%;
+  margin-left:10%;
+  position:absolute;
+  margin-top:1.5%;
+  border-radius:10px;
+  border: 4px solid #B22222;
+}
+
+#boxBottoni{
+  width:80%;
+  height:10%;
+  position:absolute;
+  margin-left:10%;
+  margin-top:20%;
+  border-radius:10px;
+  border: 4px solid #B22222;
+}
+
+.testo{
+  margin-top:2%;
+  margin-left:25%;
+  margin-right:25%;
+  position:absolute;
+}
+
+h1{
+  color:white;
+  text-align:left;
+  font-family:Calibri;
+}
+
+.datiSalvati{
+  color:white;
+  margin-left:30px;
+  margin-top:210px;
+  position:absolute;
+  font-size:22px;
+  font-family:Calibri;
+}
+
+.datiSalvati1{
+  color:white;
+  position:absolute;
+  margin-left:360px;
+  font-size:22px;
+  font-family:Calibri;
+  margin-top:210px;
+}
+
+.datiSalvati2{
+  color:white;
+  position:absolute;
+  margin-left:710px;
+  font-size:22px;
+  font-family:Calibri;
+  margin-top:210px;
+}
+
+.datiSalvati3{
+  color:white;
+  position:absolute;
+  margin-left:1060px;
+  font-size:22px;
+  font-family:Calibri;
+  margin-top:210px;
+}
+
+.datiSalvati4{
+  color:white;
+  position:absolute;
+  margin-left:1420px;
+  font-size:22px;
+  font-family:Calibri;
+  margin-top:210px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #212121; 
+    color: white; 
+    border: 2px solid #B22222;
+  border-radius: 10px;
+  
+}
+
+.button1:hover {
+    background-color: #B22222;
+    color: white;
+}
+
+.txt {
+	border:2px solid #B22222;
+  background-color:#212121;
+  color:white;
+	border-radius:10px;
+	height: 22px;
+	width: 200px;
+  font-size:16px;
+  text-align: center;
+}
+
+.bottone{
+
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.bottone1{
+  margin-left:10%;
+  margin-top:2%;
+  background-color: #212121; 
+  color: white; 
+  border: 2px solid #B22222;
+  border-radius: 10px;
+}
+
+.bottone1:hover {
+    background-color: #B22222;
+    color: white;
+}
+**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 86%;
+  margin-left:-1.2%;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #B22222;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 80%;
+  margin-left:-0.4%;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
