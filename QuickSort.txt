@@ -1,0 +1,32 @@
+// ATTENZIONE : per l'avvio fin deve essere pari a v.length-1
+public void QuickSort( int [] v , int in , int fin ){
+		if( fin<=in )return;
+			int pos=partiziona( v,in,fin );
+                        /*
+                         * Ricorsione...(Quindi algoritmo non in-place , in quanto deve
+                         * allocare memoria fino alla risoluzione del problema)
+                         */
+			QuickSort( v,in,pos-1 );  //Sotto porzione sinistra
+			QuickSort( v,pos+1,fin ); //Sotto porzione destra
+	}
+
+public int partiziona( int[]v , int in , int fin ){
+      // L'elemento pivot è il primo (posizione 0)
+		int i=in+1,j=fin;
+		while( i<=j ){
+			while( (i<=fin) && (v[i]<=v[fin]) ) i++;
+				while( v[j]>v[in] ) j--;
+				if( i<=j ){
+                                        // Scambia
+					int t=v[i];
+					v[i]=v[j];
+					v[j]=t;
+				}
+		}
+                // Scambia
+		int tt=v[in];
+		v[in]=v[i-1];
+		v[i-1]=tt;
+
+		return i-1;
+	}

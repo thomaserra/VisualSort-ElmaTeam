@@ -1,0 +1,86 @@
+ public void bubbleSort(Vector v) 
+     {
+     String first;
+     String next;
+     int i = v.size();
+     while(i>0) 
+       {
+       for(int j=0; j < i; j++) 
+         {
+         first = (String) v.elementAt(j);
+         next = (String) v.elementAt(j+1);
+         if(first.compareTo(next)>0)   /*scambiare il '>' con '<' per ottenere un ordinamento decrescente*/
+           exchange(v,j,j+1);
+         }
+       i--; 
+       }
+     }
+ 	
+   public static void exchange(Vector v, int i, int j) 
+     {
+     Object obk = v.elementAt(i);
+     v.setElementAt(v.elementAt(j),i);
+     v.setElementAt(obk,j);
+     }
+Segue una documentata implementazione Java dell'algoritmo di sort a bolle,
+pensata da uno studente del dipartimento di informatica (ITPS) di Bari:
+
+   /**
+    * Questo algoritmo di sort a bolle, si basa sul
+    * confronto, passo dopo passo, dell'elemento corrente (dell' indice)
+    * con quello precedente (confronto tra coppie adiacenti).
+    * Se quello precedente e' maggiore di quello corrente
+    * viene effettuato lo scambio.
+    *
+    * Descrizione dettagliata:
+    * La variabile passo corrisponde al passo corrente, ovvero al numero
+    * di elementi gia' ordinati.
+    * Se nel passo sono stati effettuati scambi (lo sappiamo grazie alla
+    * variabile booleana scambio) allora significa che l'array non e' ancora
+    * ordinato e quindi bisogna continuare con il prossimo passo.
+    * Se, invece, in un intero passo non sono stati effettuati scambi (nel
+    * ciclo interno do-while) allora l'array e' ordinato e quindi si puo'
+    * uscire dall' intero algoritmo.
+    * Cosi' facendo si riesce a far risalire a galla ordinatamente le
+    * stringhe più' piccole fra quelle in esame.
+    * Ho pensato ad un ciclo do-while e non un while, perché
+    * altrimenti l'ultimo elemento (quello la cui posizione e' maggiore
+    * del passo) non verrebbe ordinato.
+    * Nel caso peggiore si esce dall'algoritmo solo quando il passo supera
+    * la posizione dell'ultimo elemento dell'array, e questo si verifica
+    * ad esempio quando gli elementi da ordinare sono in un ordine inverso.
+    * L'ordine di complessita' e' quadratico [MAX (n)*(n-1)/2 ],
+    * ma l'algoritmo, grazie alla variabile sentinella scambio,
+    * risulta ottimizzato.
+    */
+    public void sort() {
+        String temp = "";
+        String[] strings = {"ciao", "come", "stai"};
+        int indice = 0;
+        //variabile sentinella di scambio.
+        boolean scambio = true;
+        if (strings.length > 1) {
+            //Il ciclo esterno si occupa di incrementare il passo se, e solo se,
+            //il passo corrente e' minore del numero di stringhe presenti nell'
+            //array e se sono stati effettuati scambi nel passo precedete.
+            for (int passo = 0; passo <= (strings.length - 1)
+                    && (scambio); passo++) {
+                //impostiamo indice all'utlimo elemento presente nell'array.
+                indice = strings.length - 1;
+                scambio = false;
+                do {
+                    if (strings[indice].compareToIgnoreCase(
+                          strings[indice - 1]) < 0) {
+                            temp = strings[indice];
+                            strings[indice] = this.strings[indice - 1];
+                            strings[indice - 1] = temp;  
+                            //Sono stati effettuati scambi,quindi scambio sara'true.
+                            scambio = true;
+                    }
+                    indice--;
+                } while (indice > passo);
+            //Non e'difficile notare che mentre il passo aumenta da sinistra,
+            //da destra vengono man mano ordinati sempre meno elementi.
+            }
+        }
+    }

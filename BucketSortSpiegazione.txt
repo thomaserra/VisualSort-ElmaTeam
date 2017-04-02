@@ -1,0 +1,3 @@
+l Bucket sort è un algoritmo di ordinamento per valori numerici interi con complessità lineare O(n+m), dove n è la lunghezza dell'array e m è il valore massimo che può esserci nell'array. Non è basato su confronti e scambi e conviene utilizzarlo quando il valore di m è piccolo rispetto a n o comunque comparabile, altrimenti risulterebbero più veloci altri algoritmi.
+
+L'algoritmo è semplice ed intuitivo: si prepara un array C di dimensione pari a m (cioè al valore massimo che può essere nell'array) con C[i] che rappresenta la frequenza dell'elemento i nell'array di partenza A. Si visita l'array A aumentando l'elemento di C corrispondente. Dopo si visita l'array C in ordine e si scrivono su A, C[i] copie del valore i.
