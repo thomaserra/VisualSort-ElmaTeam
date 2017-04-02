@@ -1,0 +1,56 @@
+
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Progetto T.E.P.S.I.T.</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+      <title>Progetto</title>
+        <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <div id="Menu">
+   <div id="boxNumeri">
+     
+    <div class="testo">
+        <h1>Inserisci numeri da ordinare : <input type="text" class="txt" name="numeri" value="" id="numeri">
+        <button type="button" class="button button1" onClick=salvaNumeri() id="buttonS">Invia</button></h1><br>
+      </div>
+    
+      <p id="datiSalvati" class="datiSalvati"></p>
+      <p id="datiSalvati1" class="datiSalvati1"></p>
+      <p id="datiSalvati2" class="datiSalvati2"></p>
+      <p id="datiSalvati3" class="datiSalvati3"></p>
+      <p id="datiSalvati4" class="datiSalvati4"></p>
+     
+    </div>
+    
+  <div id="boxBottoni">
+      <div id ="bottoni">
+    <button data-tooltip="Preso un elemento dal vettore si pongono gli elementi minori a sinistra e gli elementi maggiori a destra." class="bottone bottone1" type="button" >Quick Sort
+    <button data-tooltip="il metodo riceve un vettore e lo divide in due parti uguali e su ogni meta del vettore viene richiamato ricorsivamente il metodo. Alla fine dell' invocazione le due sottoparti ordinate vengono fuse in un unico vettore ordinato." class="bottone bottone1" type="button">Log di Merg
+      <button data-tooltip=" si calcolano i valori massimi e minimi e si prepara un array di dimensione pari all'intervallo dei valori che rappresenta la frequenza dell'elemento i+min(A) nell'array di partenza A.Dopo si visita l'array C in ordine e si scrivono su A, C[i] copie del valore i+min(A)." class="bottone bottone1" type="button">Counting Sort
+        <button data-tooltip="si prepara un array C di dimensione pari a m (cioè al valore massimo che può essere nell'array) con C[i] che rappresenta la frequenza dell'elemento i nell'array di partenza A. Si visita l'array A aumentando l'elemento di C corrispondente. Dopo si visita l'array C in ordine e si scrivono su A, C[i] copie del valore i." class="bottone bottone1" type="button">Bucket Sort
+          <button  data-tooltip=" i valori vengono spostati all'interno dell'array con una dinamica che ricorda il movimento delle bollicine in un bicchiere di champagne. In particolare, alcuni elementi attraversano l'array velocemente (come bollicine che emergono dal fondo del bicchiere), altri più lentamente (a differenza di quanto avviene nel caso del bicchiere di champagne, tuttavia, alcuni elementi salgono ma altri scendono)." class="bottone bottone1" type="button">Bubble Sort
+  </div>
+  </div>
+  
+   
+  
+</body>
+</html>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
